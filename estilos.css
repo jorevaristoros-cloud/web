@@ -1,0 +1,240 @@
+/* CONFIGURACION GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080d18;
+    color: white;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #0c1425;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 2px solid #00d9ff;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header span {
+    color: #00d9ff;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #00d9ff;
+}
+
+/* PORTADA */
+.principal {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #101d38, #080d18);
+    animation: aparecer 1s ease;
+}
+
+.principal h2 {
+    font-size: 36px;
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+.principal p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.imagen-principal {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 12px;
+    border: 2px solid #00d9ff;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background-color: #00d9ff;
+    color: #080d18;
+    padding: 12px 22px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/* SECCIONES */
+.seccion {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.seccion h2 {
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+.seccion h3 {
+    margin: 20px 0 10px;
+}
+
+.seccion p {
+    margin-bottom: 12px;
+}
+
+.oscuro {
+    background-color: #10192b;
+}
+
+/* TARJETAS */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta {
+    flex: 1;
+    min-width: 220px;
+    padding: 25px;
+    background-color: #18253c;
+    border: 1px solid #00d9ff;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+}
+
+.tarjeta h3 {
+    color: #00d9ff;
+    margin-top: 0;
+}
+
+/* CONTACTOS */
+.contacto {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* VIDEO DE YOUTUBE */
+.video {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    margin: 25px auto;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* AUDIO Y VIDEO LOCAL */
+.multimedia {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background-color: #050912;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #00d9ff;
+}
+
+/* ANIMACION */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MEDIA QUERY 1: TABLETS */
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .principal h2 {
+        font-size: 30px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+}
+
+/* MEDIA QUERY 2: CELULARES */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 25px;
+    }
+
+    .principal {
+        padding: 50px 0;
+    }
+
+    .principal h2 {
+        font-size: 25px;
+    }
+
+    .seccion {
+        padding: 40px 0;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 4px;
+    }
+}
